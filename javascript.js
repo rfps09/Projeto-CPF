@@ -22,7 +22,10 @@ function cpf(num) {
 
         if(validacao == num[10] - '0')
         document.querySelector(".alert").innerHTML = "CPF = " + num;
-        else document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
+        else {
+            document.querySelector(".alert").style.color = "red";
+            document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
+        }
     }
     else if(num[10] == 'x' || num[10] == 'X') {
         for(i = 10; i > 1; i--) {
@@ -42,7 +45,10 @@ function cpf(num) {
             num = num.replace("x",String.fromCharCode(validacao+48));
             num = num.replace("X",String.fromCharCode(validacao+48));
             document.querySelector(".alert").innerHTML = "CPF = " + num;
-        } else document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
+        } else {
+            document.querySelector(".alert").style.color = "red";
+            document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
+        }
     }
     else{
         for(i = 10; i > 1; i--) {
@@ -78,7 +84,10 @@ function cpf(num) {
                 else count++;
             } else count++;
         }
-        if(count > 9) document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
+        if(count > 9) {
+            document.querySelector(".alert").style.color = "red";
+            document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
+        }
     }
 }
 
@@ -130,16 +139,23 @@ function validar() {
             }
         }
         if(incorrect == 1) {
+            document.querySelector(".alert").style.color = "red";
             document.querySelector(".alert").innerHTML = "Formato Invalido";
         }
         else {
             if(numbers == 10 && count == 1) cpf(num);
             else if(numbers == 11 && count == 0) validarCPF(num);
-            else document.querySelector(".alert").innerHTML = "Formato Invalido";
+            else {
+                document.querySelector(".alert").style.color = "red";
+                document.querySelector(".alert").innerHTML = "Formato Invalido";
+            }
         }
     }
     else if (num.length == 0) document.querySelector(".alert").innerHTML = "Insira um CPF";
-    else document.querySelector(".alert").innerHTML = "Formato Invalido";
+    else {
+        document.querySelector(".alert").style.color = "red";
+        document.querySelector(".alert").innerHTML = "Formato Invalido";
+    }
 }
 
 document.addEventListener('keydown', (event) => {
