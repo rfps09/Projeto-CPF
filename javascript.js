@@ -5,7 +5,7 @@ function cpf(num) {
     var aux = 0;
     var count = 0;
 
-    if(num[9] == 'x') {
+    if(num[9] == 'x' || num[9] == 'X') {
         for(i = 10; i > 1; i--) {
             sum += (num[10-i]-'0') * i;
         }
@@ -16,6 +16,7 @@ function cpf(num) {
         }
         sum+= validacao*2;
         num = num.replace("x",String.fromCharCode(validacao+48));
+        num = num.replace("X",String.fromCharCode(validacao+48));
         validacao = 11 - (sum % 11);
         validacao = validacao > 9 ? 0 : validacao;
 
@@ -23,7 +24,7 @@ function cpf(num) {
         document.querySelector(".alert").innerHTML = "CPF = " + num;
         else document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
     }
-    else if(num[10] == 'x') {
+    else if(num[10] == 'x' || num[10] == 'X') {
         for(i = 10; i > 1; i--) {
             sum += (num[10-i]-'0') * i;
         }
@@ -39,13 +40,14 @@ function cpf(num) {
             validacao = 11 - (sum%11);
             validacao = validacao > 9 ? 0 : validacao;
             num = num.replace("x",String.fromCharCode(validacao+48));
+            num = num.replace("X",String.fromCharCode(validacao+48));
             document.querySelector(".alert").innerHTML = "CPF = " + num;
         } else document.querySelector(".alert").innerHTML = "CPF Invalido!!!";
     }
     else{
         for(i = 10; i > 1; i--) {
             console.log("teste");
-            if(num[10-i] != 'x') {
+            if(num[10-i] != 'x' && num[10-i] != 'X') {
                 sum += (num[10-i]-'0') * i;
             }
             else {
@@ -61,7 +63,7 @@ function cpf(num) {
 
             if(validacao == num[9]-'0') {
                 for(j = 11; j > 1; j--) {
-                    if(num[11-j] != 'x') {
+                    if(num[11-j] != 'x' && num[11-j] != 'X') {
                         aux += (num[11-j]-'0');
                     }
                 }
@@ -70,6 +72,7 @@ function cpf(num) {
                 validacao = validacao > 9 ? 0 : validacao;
                 if(validacao == num[10] - '0') {                    
                     num = num.replace("x",String.fromCharCode(i+48));
+                    num = num.replace("X",String.fromCharCode(i+48));
                     document.querySelector(".alert").innerHTML = "CPF = " + num;
                 }
                 else count++;
@@ -135,7 +138,19 @@ function validar() {
             else document.querySelector(".alert").innerHTML = "Formato Invalido";
         }
     }
-    else {
-        document.querySelector(".alert").innerHTML = "Formato Invalido";
-    }
+    else if (num.length == 0) document.querySelector(".alert").innerHTML = "Insira um CPF";
+    else document.querySelector(".alert").innerHTML = "Formato Invalido";
 }
+
+document.addEventListener('keydown', (event) => {
+    if (event.key == "Enter") {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener('keyup', (event) => {
+    if (event.key == "Enter") {
+        event.preventDefault();
+        document.getElementById("btn").click();
+    }
+});
