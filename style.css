@@ -1,26 +1,24 @@
 
 * {
-    margin: auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 body {
     background-color: rgb(106, 90, 205);
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    width: 100vw;
-    display: block;
-    grid-template-columns: 86rem 14rem;
-    grid-template-areas: "main footer";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+/*     grid-template-columns: 86% 14%;
+    grid-template-areas: "main footer"; */
     align-items: center;
     justify-items: center;
-
 }
 main.container {
     position:relative;
     display:grid;
-    grid-area: main; 
     height: 37.5rem;
     width: 76rem;
     border-radius: 46px;
@@ -156,34 +154,31 @@ h3 {
     opacity: 1;
 }
 .inf {
-    display: inline-flex;
-    margin-top: 4em; 
+    display: flex;
+    margin-top: 1em; 
     width: 40em;
     height: 8em;
+    justify-content: center;
+    align-items: center;
 }
 .alert {
     display: inline-block;
-    align-items: center;
-    justify-items: center;
-    font-family: sans-serif;
     font-size: 2em;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.266);
-    
 }
 
 footer {
-    display: grid;
-    grid-area: footer;
+    display: flex;
     position:relative;
     height: 60px;
     width: 600px;
+    margin-top: 1em;
     justify-content: center;
 }
 .mk {
     color: rgb(255, 255, 250);
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.266);
     position: absolute;
-    top: -0.1em;
     font-size: 20px;
 }
 .contats {
@@ -254,5 +249,19 @@ footer {
     from {
       -webkit-transform: translate3d(0, 0, 1,);
       transform: translate3d(0, 0, 1,);
+    }
+}
+@media screen and (max-width: 720px) /* falta resolver a responsividade no celular */ {
+    body{
+        width:auto;
+        height: auto;
+    }
+    main.container {
+        width: 96%;
+        height: auto;
+    }
+    h1, h2 {
+        display: grid;
+        font-size: 10%;
     }
 }
