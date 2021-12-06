@@ -1,4 +1,4 @@
-/*versão brasileira 2.666*/
+/*versão brasileira 2.667*/
 * {
     margin: 0;
     padding: 0;
@@ -262,7 +262,7 @@ footer {
     }
     main.container {
         width: 96%;
-        height: 90.1vh;
+        height: 84vh;
         padding: 0;
     }
     h2{font-size: 2.2em; margin-top:0;}
