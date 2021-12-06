@@ -255,7 +255,7 @@ footer {
       transform: translate3d(0, 0, 1,);
     }
 }
-@media screen and (max-width: 412px){
+@media screen and (max-width: 540px){
     body{
         width:auto;
         height: auto;
@@ -265,8 +265,8 @@ footer {
         height: 74vh;
         padding: 0;
     }
-    h2{font-size: 2.3em; margin-top:0;}
-    h3{font-size: 1.5em;
+    h2{font-size: 2.8em; margin-top:0;}
+    h3{font-size: 1.7em;
         margin-top: -2em;
         margin-bottom: -2em;
         width:90vw;
@@ -283,13 +283,13 @@ footer {
     }
     .input-field .underline::before, .underline::after{width: 94vw;max-width: 94vw;}
     .input-field input{
-        padding: 0.8em 0em 0em 0.4em;
-        font-size: 1em;
+        padding: 0.2em 0em 0em 0.4em;
+        font-size: 1.34em;
         margin-right: 0px;
         max-width: 96vw;
     }
     .validbtn{
-        margin-top:0.6em; /*ajeitar proporção*/
+        margin-top:4vh; /*ajeitar proporção//ajeitado*/
     }
     #btn:hover, #btn:focus {
         transform: translateY(10px);
@@ -341,6 +341,7 @@ footer {
         margin-right: 0px;
         max-width: 96vw;
     }
+    .validbtn{margin-top:0.4em;}
     #btn{
     min-width: 180px;
     min-height: 40px;
