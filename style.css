@@ -1,4 +1,4 @@
-
+/*versão brasileira 2.666*/
 * {
     margin: 0;
     padding: 0;
@@ -255,18 +255,18 @@ footer {
       transform: translate3d(0, 0, 1,);
     }
 }
-@media screen and (max-width: 540px){
+@media screen and (max-width: 425px){
     body{
         width:auto;
         height: auto;
     }
     main.container {
         width: 96%;
-        height: 74vh;
+        height: 90.1vh;
         padding: 0;
     }
-    h2{font-size: 2.8em; margin-top:0;}
-    h3{font-size: 1.7em;
+    h2{font-size: 2.2em; margin-top:0;}
+    h3{font-size: 1.4em;
         margin-top: -2em;
         margin-bottom: -2em;
         width:90vw;
@@ -281,10 +281,10 @@ footer {
         width: 94vw;
         max-width: 96vw;
     }
-    .input-field .underline::before, .underline::after{width: 94vw;max-width: 94vw;}
+    .input-field .underline::before, .underline::after{width: 96vw;max-width: 98vw;}
     .input-field input{
         padding: 0.2em 0em 0em 0.4em;
-        font-size: 1.34em;
+        font-size: 1.05em;
         margin-right: 0px;
         max-width: 96vw;
     }
