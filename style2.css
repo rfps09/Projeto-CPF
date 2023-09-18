@@ -1,0 +1,82 @@
+/*Versão brasileira 18.09.23*/
+.input-field input{
+    /*font-size: 1.8rem;*/
+    padding: 0.6em 0 0.4em;
+}
+
+.input-field .underline::after {
+    transform: scaleX(0);
+    transition: all .4s ease-in-out;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform:scaleX(1);
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#btn {
+    min-width: 300px;
+    min-height: 60px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700px;
+    color: rgba(250, 250, 250);
+    background: linear-gradient(90deg, rgba(106, 90, 205, 1) 0%, rgb(68, 88, 233, 1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(106, 90, 205,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+#btn::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid rgb(68, 88, 233, 1);
+    box-shadow: 0 0 60px rgba(91, 164, 233,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+#btn:hover, #btn:focus {
+    transform: translateY(-6px);
+}
+
+#btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: rgba(206, 206, 206, 0.8);
+}
+
+#btn:hover::before, #btn:focus::before {
+    opacity: 1;
+}
+
+.divi{
+    animation-name: rotateIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateIn {
+    from {
+        -webkit-transform: rotate3d(0, 0, 1, -360deg);
+        transform: rotate3d(0, 0, 1, -720deg);
+    }
+
+    from {
+        -webkit-transform: translate3d(0, 0, 1,);
+        transform: translate3d(0, 0, 1,);
+    }
+}

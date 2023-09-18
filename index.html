@@ -1,41 +1,84 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style2.css">
     <script src="https://kit.fontawesome.com/1d6021577d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+
     <script src="javascript.js"></script>
     <title>CPF</title>
   </head>
-  <body>
-    <main class="container">
-        <h2>Validador e Descobridor de CPF</h2>
-        <h3>Digite o CPF que deseja validar ou descobrir um dígito na caixa de texto abaixo e clique em "Validar".</h3>
-        <form class="org">
-            <div class="input-field">
-                <input type="search" id="cpf-id" placeholder="Digite o CPF com o 'x' no lugar do número faltando.">
-                <div class="underline"></div>
+  <body class="flex flex-col items-center justify-center w-full h-screen text-center text-slate-600 font-['Poppins'] bg-[#6A5ACDFF]">
+    <main class="relative flex flex-col items-center justify-evenly w-11/12 h-5/6 md:w-[73rem] md:h-[37.5rem] rounded-2xl shadow-lg shadow-slate-600 bg-white">
+        <div class="flex flex-col mb-14 md:mx-10 md:px-14 gap-2">
+            <h1 class="text-lg md:text-4xl text-slate-900">
+                Validador e Descobridor de CPF
+            </h1>
+            <h2 class="text-md md:text-2xl text-slate-500">
+                Se você deseja saber se um CPF é valido, digite e verifique!
+            </h2>
+            <h2 class="text-md md:text-2xl text-slate-500">
+                Ou se você 'perdeu' um dígito do CPF e deseja descobrir, digite o CPF com o 'x' na posição do dígito 'perdido' e clique em "Validar".
+            </h2>
+        </div>
+        <form class="flex flex-col md:flex-row gap-6 md:gap-0 items-center justify-center md:w-full">
+            <div class="input-field relative md:mr-[40px] flex flex-col items-center justify-center">
+                <input
+                    class="flex flex-col content-center justify-center relative md:mr-10 text-center text-lg md:text-2xl w-full h-12 md:h-16 md:w-[666px] text-slate-800 placeholder:text-[12px] md:placeholder:text-xl outline-none border-none bg-transparent"
+                    type="search" id="cpf-id" placeholder="Digite o CPF com o 'x' no lugar do número faltando." maxlength="11" autofocus required
+                >
+                <div class="underline before:absolute after:absolute before:w-full after:w-full
+                                before:md:w-[666px] after:md:w-[666px] before:h-[2px] after:h-[2px] before:content-[''] after:content-['']
+                                before:bottom-[12px] after:bottom-[12px] before:left-0 after:left-0 before:bg-[#6A5ACD38] after:bg-[#6A5ACDDC]
+                                ">
+                </div>
+
             </div>
-            <div class="validbtn">
-                <button id="btn" type="button" onclick="validar()" >Validar / Verificar</button>
+            <div class="validbtn justify-center">
+                <button id="btn" type="button" onclick="validar()"
+                    class="relative p-2 cursor:pointer uppercase text-white text-lg font-bold tracking-[1.3px] rounded-full border-none outline-none min-w-[300px] min-h-[60px] bg-gradient-to-r from-[#6A5ACDFF] to-[#4458E9FF] shadow-lg shadow-[#6A5ACDA3]"
+                >Validar / Verificar
+                </button>
             </div>
         </form>
-        <div class="inf">
-            <div class="alert">
+        <div class="inf flex items-center justify-center mt-[1em] w-[40em] h-[8em]">
+            <div class="alert text-xl rounded-full w-[60vw] text-slate-600 text-white bg-zinc-400">
             </div>
         </div>
+
+        <table class="border-collapse border border-slate-500 mx-6 md:w-4/5">
+            <thead class="text-slate-950">
+                <tr>
+                    <th class="bg-zinc-400">Entrada</th>
+                    <th class="bg-zinc-400">Resultado</th>
+                </tr>
+            </thead>
+            <tbody id="table-results">
+            </tbody>
+        </table>
     </main>
-    <footer>
-        <div class="mk">Feito por:</div>
-        <div class="contats">
-            <div class="rfps" >Rafael Felipe<a href="https://www.github.com/rfps09" target="_blank"><i class="fab fa-github"></i></a></div>
-            <div class="divi"></div>
-            <div class="jsds"><a href="https://www.github.com/samuel06santos" target="_blank"><i class="fab fa-github"></i></a>Samuel Santos</div>
+    <footer class="flex flex-col mt-[1em] items-center justify-center w-96 h-16">
+        <div class="text-base text-white">Feito por:</div>
+        <div class="flex flex-row gap-4 items-center justify-center text-white">
+            <a class="px-2 flex flex-row gap-2 items-center" href="https://www.github.com/rfps09" target="_blank">
+                <div>Rafael Felipe</div>
+                <i class="fab fa-github"></i>
+            </a>
+
+            <div class="divi w-0.5 h-4 bg-white"></div>
+
+            <a class="px-2 flex flex-row gap-2 items-center" href="https://www.github.com/samuel06santos" target="_blank">
+                <i class="fab fa-github"></i>
+                <div>Samuel Santos</div>
+            </a>
         </div>
     </footer>
   </body>

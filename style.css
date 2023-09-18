@@ -1,4 +1,5 @@
 /*versão brasileira 2.667*/
+/*obsoleto (não utilizando mais)*/
 * {
     margin: 0;
     padding: 0;
@@ -116,8 +117,7 @@ h3 {
     letter-spacing: 1.3px;
     font-weight: 700px;
     color: rgba(250, 250, 250);
-    background: rgba(106, 90, 205);
-  background: linear-gradient(90deg, rgba(106, 90, 205, 1) 0%, rgb(68, 88, 233, 1) 100%);
+    background: linear-gradient(90deg, rgba(106, 90, 205, 1) 0%, rgb(68, 88, 233, 1) 100%);
     border: none;
     border-radius: 1000px;
     box-shadow: 12px 12px 24px rgba(106, 90, 205,.64);
@@ -164,7 +164,9 @@ h3 {
 }
 .alert {
     display: inline-block;
-    box-sizing: border-box;background-color: rgba(255, 127, 80, 0.883);width: 60vw;
+    box-sizing: border-box;
+    background-color: rgba(255, 127, 80, 0.883);
+    width: 60vw;
     border-radius: 1000px;
     font-size: 2em;
     text-align: center;
