@@ -3,14 +3,18 @@ Disponível online em: ___https://rfps09.github.io/Projeto-CPF/___
 
 Projeto feito por:
 
-<a style="display: flex;align-items: center;gap:10px;cursor: pointer;" src="https://github.com/rfps09">
-    <img src="https://avatars.githubusercontent.com/u/85466430?v=4" width="40px" style="border-radius: 50%;"/>
-    <span style="font-size: larger"><strong>Rafael Felipe</strong></span>
+<a href="https://github.com/rfps09">
+    <div style="display: flex;align-items: center;gap:10px;cursor: pointer;">
+        <img src="https://avatars.githubusercontent.com/u/85466430?v=4" width="40px" style="border-radius: 50%;"/>
+        <span style="font-size: larger"><strong>Rafael Felipe</strong></span>
+    </div>
 </a>
 <br>
-<a style="display: flex;align-items: center;gap:10px;cursor: pointer;" src="https://github.com/samuel06santos">
-    <img src="https://avatars.githubusercontent.com/u/80470130?v=4" width="40px" style="border-radius: 50%;"/>
-    <span style="font-size: larger"><strong>Samuel Santos</strong></span>
+<a href="https://github.com/samuel06santos">
+    <div style="display: flex;align-items: center;gap:10px;cursor: pointer;">
+        <img src="https://avatars.githubusercontent.com/u/80470130?v=4" width="40px" style="border-radius: 50%;"/>
+        <span style="font-size: larger"><strong>Samuel Santos</strong></span>
+    </div>
 </a>
 
 # Validador de CPF
